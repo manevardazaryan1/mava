@@ -1,0 +1,35 @@
+.header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(19.4px);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+}
+
+.header img {
+  height: 50px;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.header-wrapper a {
+  display: flex;
+  gap: 10px;
+  font-family: "Poppins";
+  font-size: 1.4rem;
+  font-weight: 900;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
