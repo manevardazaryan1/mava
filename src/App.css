@@ -2,9 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
 body {
+  background-color:  #edf7fb;
   overflow-x: hidden !important;
 }
 
@@ -37,20 +39,16 @@ body.disabled {
 
 .container {
   max-width: 1570px;
-  padding: 0 15px;
+  width: 100%;
+  padding: 25px;
   margin: 0 auto;
 }
 
 a {
   text-decoration: none;
-  background: inherit;
   color: inherit;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
-  background-color: #ecf0f3;
-}
 
 .not-found {
   min-height: 100vh;

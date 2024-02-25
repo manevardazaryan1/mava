@@ -3,11 +3,25 @@
   font-family: "Poppins"; 
 }
 
+/* .header .container {
+  background-image: url("../../images/login-signup/login-signup-background-image.webp");
+  padding: 0;
+}
+
+.header-wrapper{
+  backdrop-filter: blur(19.4px);
+  padding: 10px 25px;
+} */
 
 .workspaces-title {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
+  color: #333;
+}
+
+.workspace-box__text-info {
+  color: #333;
 }
 
 .workspaces-title h4 {
@@ -24,3 +38,13 @@
   position: relative;
 } */
 
+@media only screen and (max-width: 768px) {
+  .workspaces {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .workspaces-title {
+    width: 100%;
+  }
+}

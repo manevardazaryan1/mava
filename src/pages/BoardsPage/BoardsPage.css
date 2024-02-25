@@ -1,6 +1,14 @@
 .container.container--boardsPage {
-  max-width: 1300px;
-  margin-top: 8rem;
+  width: 90%;
+  /* margin-top: 8rem; */
   display: flex;
   gap: 40px;
+  min-height: 100vh;
+  padding-top: 105px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container.container--boardsPage {
+    flex-direction: column;
+  }
 }

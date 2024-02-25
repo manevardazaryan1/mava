@@ -1,7 +1,6 @@
 import "./App.css";
-
 import { useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
 import { login } from "./redux/slices/authenticationSlice";
 import { Header } from "./components/Header/Header";
 import Login from "./pages/Auth/Login";
@@ -17,14 +16,15 @@ import { useDispatch } from "react-redux";
 
 import { Route, Routes } from "react-router-dom";
 
-
 function App() {
   const dispatch = useDispatch();
-  
+  const navigate = useNavigate();
+
   useEffect(() => {
     const isLoggedIn = window.localStorage.getItem("isLoggedIn");
     if (isLoggedIn && isLoggedIn === "ON") {
       dispatch(login(JSON.parse(window.localStorage.getItem("loggedUser"))));
+      navigate("/workspaces");
     }
   }, [dispatch]);
 

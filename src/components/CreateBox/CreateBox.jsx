@@ -167,7 +167,7 @@ export const CreateBox = ({ setCreateCount, type, handleBox }) => {
   return (
     <div className={`create-box ${type}`}>
       <p className='create-box__type'>Create {type}</p>
-      <div onClick={handleClose} className="create-box__btn"><Button>X</Button></div>
+      <div onClick={handleClose} className="create-box__btn "><Button className="close-add-workspace-modal-btn"><i className="fa-solid fa-xmark"></i></Button></div>
       <div className='create-box__images'>
         {
           images.map(img => {
@@ -178,9 +178,8 @@ export const CreateBox = ({ setCreateCount, type, handleBox }) => {
         }
       </div>
       <div className="create-box__info">
-        <p className='create-box__title'><span>{type}</span> title</p>
         <label>
-          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} onKeyDown={handleEnter} />
+          <input type="text" placeholder={`${type} title`} value={title} onChange={(e) => setTitle(e.target.value)} onKeyDown={handleEnter} />
           <Button disabled={!(selectedWorkspaceImg || selectedBoardImg.thumb)} type={'secondary'} onClick={handleAddClick} >Add {type}</Button>
         </label>
       </div>

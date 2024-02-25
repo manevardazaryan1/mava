@@ -63,7 +63,6 @@ export const BoardsList = () => {
         </div>
       </div>
       <div className='boardsList-text'>
-        <img src={person} alt="person" />
         <p>Your boards</p>
       </div>
       <div className="boardsList-items">

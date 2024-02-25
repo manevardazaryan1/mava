@@ -1,48 +1,48 @@
 .button {
-  /* border-radius: 5px;
-  padding: 5px 10px;
-  transition: all .3s;
-  border-radius: 5px;
-  background: linear-gradient(45deg, #cacaca, #f0f0f0);
-  box-shadow: 20px -20px 50px #bebebe,
-    -20px 20px 50px #ffffff;
-  border: none;
-  font-size: 14px; */
-  color: #ffffff;
-  padding: 0.3em 1.0em;
-  font-size: 16px;
-  border-radius: 0.5em;
-  background: #000000;
+  border-radius: 10px;
+  padding: 17px 20px;
   cursor: pointer;
-  /* border: 1px solid #e8e8e8; */
-  border: none;
-  transition: all 0.3s;
-  box-shadow: -6px 6px 6px #c5c5c5, -6px -6px 12px #ffffff;
-  font-family: 'Roboto', sans-serif;
+  transition: .2s ease-in-out;
+  font-size: 21px;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(13px);
+  border: 1px solid rgba(148, 148, 148, 0.15);
 }
 
 .button.main {
-  background-color: #fff;
-  color: #000;
+  background: linear-gradient(45deg, #19b3ae, #452eb7);
+  backdrop-filter: blur(13px);
+  color: #fff;
+  border: 1px solid #ffffff70;
 }
 
 .button.secondary {
-  background-color: #5d2d85;
+  background: linear-gradient(45deg, #1ee3dcd3, #452eb7cf);
+  border: 1px solid #fff !important;
   color: #ffffff;
 }
 
 .button:hover {
-  opacity: .75;
+  transition: .2s ease-in-out;
+}
+
+.button.main:hover {
+  background: linear-gradient(45deg, #1cc4be, #4c33cb);
+}
+
+.button.secondary:hover {
+  background: linear-gradient(45deg, #1fece6d3, #4931c2cf);
 }
 
 .button.account-btn {
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 15px;
+  background: #ffffff8f;
 }
 
 .button:disabled,
@@ -50,4 +50,40 @@
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
+}
+
+.button.add-workspcae-btn {
+  padding: 5px 10px;
+  color: #636363 !important;
+  font-size: 21px !important;
+  text-align: center;
+  background: hsla(0,0%,100%,.2) !important;
+  border: 2px solid hsla(0,0%,100%,.1) !important;
+  border-radius: 10px !important;
+  cursor: pointer;
+  transition: background-color .15s ease !important;
+  font-weight: 400;
+  box-shadow: 0 1px 1px rgb(128 128 128 / 18%) !important;
+}
+
+.button.add-workspcae-btn:hover {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.button.add-workspcae-btn:hover {
+  background: linear-gradient(45deg, #14959160, #3e29a582);
+}
+
+@media only screen and (max-width: 500px) {
+  .button {
+    font-size: 17px;
+    padding: 15px;
+  }
+
+  .button.account-btn {
+    width: 37px;
+    height: 37px;
+  }
 }

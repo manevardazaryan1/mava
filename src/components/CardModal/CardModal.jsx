@@ -1,7 +1,7 @@
 import './CardModal.css'
 import { useSelector } from 'react-redux'; 
 import CardDescription from './CardDescription';
-import logo from "../../images/amma-truck-logo.png"
+import logo from "../../images/mava.png"
 
 function CardModal({ cardID, setCardModal, setCardId }) {
     const path = window.location.href.split("/");
@@ -19,8 +19,8 @@ function CardModal({ cardID, setCardModal, setCardId }) {
                 <div className="card-header">
                     <h3 className="card-header-title">
                         <a href="/" className="st-logo-card-modal">
-                            <img src={logo} alt="AMMA-TRACK"/>
-                            AMMA-Track
+                            <img src={logo} alt="mava"/>
+                            mava
                         </a>
                     </h3>
                     <button onClick={() => closeCardModal()} className='close-card-modal-btn'><i className="fa-solid fa-xmark"></i></button>

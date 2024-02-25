@@ -1,4 +1,4 @@
-# mava App
+# mava app
 
 mava is a Trello clone designed to streamline task management and collaboration within teams. It provides a user-friendly interface for creating boards, lists, and cards to organize and prioritize tasks efficiently.
 

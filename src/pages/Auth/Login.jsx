@@ -27,15 +27,15 @@ export default function Login() {
   const [userIsNotExists, setUserIsNotExists] = useState(false);
   const usersCollection = collection(db, 'users');
 
-  // useEffect(() => {
-  //   const fetchusers = async () => {
-  //     const snapshot = await getDocs(usersCollection)
-  //     snapshot.docs.map((doc) => (dispatch(signUp({ ...doc.data() }))))
-  //   }
+  useEffect(() => {
+    const fetchusers = async () => {
+      const snapshot = await getDocs(usersCollection)
+      snapshot.docs.map((doc) => (dispatch(signUp({ ...doc.data() }))))
+    }
 
-  //   if (!users.length) fetchusers()
+    if (!users.length) fetchusers()
     
-  // }, [users.length, usersCollection, dispatch])
+  }, [users.length, usersCollection, dispatch])
 
   const handleInputChange = (e) => {
     switch (e.target.name) {
@@ -59,8 +59,8 @@ export default function Login() {
       ) {
         window.localStorage.setItem('loggedUser', JSON.stringify(user));
         dispatch(login(user));
-        setUserIsNotExists(() => false);
         navigate("/workspaces");
+        setUserIsNotExists(() => false);
       }
     }
     setUserIsNotExists(() => true)

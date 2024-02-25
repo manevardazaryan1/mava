@@ -3,7 +3,21 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const todosSlice = createSlice({
   name: 'todos',
-  initialState: [],
+  initialState: [
+    {
+      boardId: "2024-02-15T15:11:09.063A",
+      id: "1708071130577",
+      position: 1,
+      title: "list",
+    },
+
+    {
+      boardId: "2024-02-15T15:11:09.063A",
+      id: "1708071130599",
+      position: 1,
+      title: "list1",
+    }
+  ],
   reducers: {
     addTodo: (state, action) => {
       state.push(action.payload);

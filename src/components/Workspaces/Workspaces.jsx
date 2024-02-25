@@ -50,7 +50,7 @@ export const Workspaces = () => {
     <div className="workspaces">
       <div className="workspaces-title">
         <h4>Workspaces</h4>
-        <Button onClick={() => dispatch(workspaceCreationBoxHandle({ val: true }))} type="main">+</Button>
+        <Button onClick={() => dispatch(workspaceCreationBoxHandle({ val: true }))} type="main" className="add-workspcae-btn">+</Button>
         {create && <CreateBox handleBox={workspaceCreationBoxHandle} type={'workspace'} />}
       </div>
       {
@@ -64,7 +64,5 @@ export const Workspaces = () => {
         
       }
     </div>
-
-
   )
 }

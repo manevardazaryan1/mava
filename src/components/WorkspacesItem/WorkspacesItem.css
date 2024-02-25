@@ -22,7 +22,7 @@
 }
 
 .workspaces-item__info:hover {
-  background-color: #c1c1c1;
+  background-color: #dde4ec;
 }
 
 .workspaces-item__img {
@@ -43,6 +43,7 @@
 .workspaces-item__title {
   font-size: 18px;
   font-weight: 500;
+  color: #333;
 }
 
 .workspaces-arrow {
@@ -75,19 +76,32 @@
   display: block;
 }
 
+.workspaces-item__more-tab.workspaces-item__more-boards span {
+  color: #333;
+}
+
 .workspaces-item__more-tab {
   display: flex;
   gap: 5px;
   align-items: center;
   transition: all .4s;
-  padding: 2px 2px 2px 43px;
+  padding: 5px;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 45px;
 }
 
 .workspaces-item__more-tab:hover {
-  background-color: #cacaca;
+  background-color: #b8bfc6;
 }
 .workspaces-item__more-tab.active{
   background-color: #cacaca;
+}
+
+@media only screen and (max-width: 768px) {
+  .workspaces-item {
+    width: 48%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+  }
 }

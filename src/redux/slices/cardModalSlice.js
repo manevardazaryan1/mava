@@ -1,7 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    descriptions: [],
+  descriptions: [
+    {cardID: "1708071483141", description: "description"},
+    {cardID: "1708071481801", description: "description"},
+    {cardID: "11708071484981", description: "description"},
+  ],
 }
 
 export const cardModalSlice = createSlice({

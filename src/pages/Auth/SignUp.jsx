@@ -31,15 +31,15 @@ export default function SignUp() {
         }
     }, [loggedIn, navigate]);
 
-    // useEffect(() => {
-    //     const fetchusers = async () => {
-    //       const snapshot = await getDocs(usersCollection)
-    //       snapshot.docs.map((doc) => (dispatch(signUp({ ...doc.data() }))))
-    //     }
+    useEffect(() => {
+        const fetchusers = async () => {
+          const snapshot = await getDocs(usersCollection)
+          snapshot.docs.map((doc) => (dispatch(signUp({ ...doc.data() }))))
+        }
     
-    //     if (!users.length) fetchusers()
+        if (!users.length) fetchusers()
         
-    // }, [users.length, usersCollection, dispatch])
+    }, [users.length, usersCollection, dispatch])
 
     useEffect(() => {
         const uname = validateUserName(userName);
@@ -103,12 +103,12 @@ export default function SignUp() {
 
             if (!users.length || !userExistsBool) {
                 dispatch(signUp({ id, userName, email, password: hashPassword(password) }));
+                await addDoc(usersCollection, { id, userName, email, password: hashPassword(password) })
+                navigate("/login");
                 setErrors(() => "");
                 setEmail(() => "");
                 setUserName(() => "");
                 setPassword(() => "");
-                await addDoc(usersCollection, { id, userName, email, password: hashPassword(password) })
-                navigate("/login");
             }
         }
     }
@@ -208,10 +208,10 @@ export default function SignUp() {
                     </div>
                     <div className="wrapper-block">
                         <div className="sign-up-info">
-                            <h3 className="sign-up-info-title">Join the MAVA</h3>
+                            <h3 className="sign-up-info-title">Join the mava</h3>
                             <p className="sign-up-info-text">
-                                It's your project, your way. Customize boards, views, and features to perfectly match your work style with MAVA.
-                                Join the MAVA revolution today! Sign up FREE and unlock the path to organized, efficient, and successful projects.
+                                It's your project, your way. Customize boards, views, and features to perfectly match your work style with mava.
+                                Join the mava revolution today! Sign up FREE and unlock the path to organized, efficient, and successful projects.
                             </p>
                         </div>
                     { Object.values(errors).join("") && signUpErrorsBlock &&

@@ -2,12 +2,13 @@ import './Footer.css'
 
 
 export const Footer = () => {
+  const date = new Date().getFullYear();
   return (
     <div className="footer">
       <div className="container">
         <div className="footer-wrapper">
-          <p>Privacy Policy</p>
-          <p>Terms of Service</p>
+          <p>&copy;{date} by mava.</p>
+          <p>All rights reserved.</p>
         </div>
       </div>
     </div>

@@ -87,9 +87,9 @@ function CardDescription({ cardID }) {
                 ]}
             />
             <div className='description-buttons'>
-                <button onClick={handleSave} className='description-btn' disabled={!text}><i className='fa-solid fa-floppy-disk'></i></button>
-                <button onClick={edit} className='edit-btn description-btn' disabled={!description}><i className='fa-solid fa-pen'></i></button>
                 <button onClick={clearText} className='description-btn' disabled={!text}><i className='fa-solid fa-xmark'></i></button>
+                <button onClick={edit} className='edit-btn description-btn' disabled={!description}><i className='fa-solid fa-pen'></i></button>
+                <button onClick={handleSave} className='description-btn' disabled={!text}><i className='fa-solid fa-floppy-disk'></i></button>
             </div>
         </div>
     )

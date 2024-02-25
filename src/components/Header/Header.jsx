@@ -2,7 +2,7 @@ import "./Header.css";
 
 import { Button } from "../Button/Button";
 
-import mavaLogo from "../../images/mava.png";
+import mavaLogo from "../../images/mava-logo.png";
 
 import { useDispatch, useSelector } from "react-redux";
 import { deleteActiveWorkspace, closeSettings } from "../../redux/slices/workspacesSlice";
@@ -21,9 +21,6 @@ export const Header = () => {
       <>
         <Link to="/login">
           <Button type="main">Sign In</Button>
-        </Link>
-        <Link to="/sign-up">
-          <Button type="secondary">Sign Up</Button>
         </Link>
       </>
     );
