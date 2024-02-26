@@ -22,7 +22,7 @@ const BoardsPage = () => {
   }, [workspaces.length])
   return (
     <>
-      <Header />
+      <Header type="on-light"/>
       <div className="container container--boardsPage">
         <Workspaces />
         {activeWorkspaceId && < BoardsList />}

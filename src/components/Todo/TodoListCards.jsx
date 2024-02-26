@@ -67,7 +67,7 @@ const TodoListCard = ({
               value={newCardText}
               onChange={e => setNewCardText(e.target.value)}
             />
-            <button type="submit" >Add card</button>
+            <button type="submit" ><i className="fa-solid fa-plus"></i></button>
           </div>
         </form>
       )}

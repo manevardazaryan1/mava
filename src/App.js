@@ -2,7 +2,6 @@ import "./App.css";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { login } from "./redux/slices/authenticationSlice";
-import { Header } from "./components/Header/Header";
 import Login from "./pages/Auth/Login";
 import SignUp from "./pages/Auth/SignUp";
 import Account from "./pages/Account/Account";
@@ -30,8 +29,6 @@ function App() {
 
   return (
     <>
-
-      <Header />
       <div className="App">
         <Routes>
           <Route path="/" element={<MainPage />} />

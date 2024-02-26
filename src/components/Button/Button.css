@@ -9,29 +9,48 @@
   border: 1px solid rgba(148, 148, 148, 0.15);
 }
 
-.button.main {
-  background: linear-gradient(45deg, #19b3ae, #452eb7);
-  backdrop-filter: blur(13px);
+.main .button.main,
+.on-image .button.main {
   color: #fff;
-  border: 1px solid #ffffff70;
+  background: hsla(0,0%,100%,.16);
+  border: 2px solid hsla(0,0%,100%,.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
-.button.secondary {
-  background: linear-gradient(45deg, #1ee3dcd3, #452eb7cf);
+.on-light .button.secondary {
+  background: #452eb7;
   border: 1px solid #fff !important;
   color: #ffffff;
+}
+
+.on-image .button.secondary {
+  color: #fff;
+  background: hsl(0deg 0% 47.28% / 20%) !important;
+  border: 2px solid hsla(0,0%,100%,.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
 .button:hover {
   transition: .2s ease-in-out;
 }
 
-.button.main:hover {
-  background: linear-gradient(45deg, #1cc4be, #4c33cb);
+.main .button.main:hover,
+.on-image .button.main:hover {
+  background: hsla(0,0%,100%,.25);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
-.button.secondary:hover {
-  background: linear-gradient(45deg, #1fece6d3, #4931c2cf);
+.on-light .button.secondary:hover {
+  background: #5538e2;
+  transition: all 0.3s ease-in-out;
+}
+
+.on-image .button.account-btn:hover,
+.on-image .button.secondary:hover {
+  background: hsla(0, 0%, 100%, 0.35) !important;
 }
 
 .button.account-btn {
@@ -42,7 +61,21 @@
   align-items: center;
   justify-content: center;
   margin-right: 15px;
-  background: #ffffff8f;
+  color: #ffffff;
+  background: hsl(250.07deg 59.83% 44.9%) !important;
+}
+
+.on-image .button.account-btn {
+  color: #fff;
+  background: hsl(0deg 0% 47.28% / 20%) !important;
+  border: 2px solid hsla(0,0%,100%,.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.button.account-btn:hover {
+  background: #5538e2 !important;
+  transition: all 0.3s ease-in-out !important;
 }
 
 .button:disabled,
@@ -68,7 +101,6 @@
 
 .button.add-workspcae-btn:hover {
   background-color: rgba(255, 255, 255, 0.5) !important;
-  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.2) !important;
   transition: all 0.3s ease-in-out !important;
 }
 

@@ -11,9 +11,9 @@ export const Info = () => {
       <div className="container">
         <div className="info-wrapper">
           <div className="hero-image">
-          <img src={heroImage} />
+          <img src={heroImage} alt="mava" />
           </div>
-          <div className="info-text">
+          <div className="info-text on-image">
             <span className="hero-label">Best task managment app</span>
             <h1 className="hero-title">mava helps team move</h1>
             <p className='info-main'>

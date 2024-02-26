@@ -63,16 +63,16 @@
   border-radius: 10px;
   padding: 10px;
   font-size: 16px;
-  color: black;
+  color: #333;
   font-weight: 600;
-  background-color: #dde4ec;
+  background-color: #452eb71f;
   cursor: pointer;
   transition: all .4s;
 }
 
 .boardsList-items__create:hover {
   color: #fff;
-  background-color: #b8bfc6;
+  background-color: #423c6480;
 }
 
 .boardsList-items__create--limit {

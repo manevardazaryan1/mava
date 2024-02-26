@@ -10,6 +10,15 @@ body {
   overflow-x: hidden !important;
 }
 
+.logo,
+.logo:hover {
+  transition: all .2s ease-in-out;
+}
+
+.logo:hover {
+  opacity: .9;
+}
+
 .loading_block {
   position: fixed;
   top: 0;

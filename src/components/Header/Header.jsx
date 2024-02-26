@@ -2,6 +2,7 @@ import "./Header.css";
 
 import { Button } from "../Button/Button";
 
+import mavaLogoWhite from "../../images/mava-white.png";
 import mavaLogo from "../../images/mava-logo.png";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -11,7 +12,7 @@ import { boardCreationBoxHandle, workspaceCreationBoxHandle } from "../../redux/
 
 import { Link } from "react-router-dom";
 
-export const Header = () => {
+export const Header = ({ type }) => {
   const loggedIn = useSelector((state) => state.auth.loggedIn);
   let buttons;
   const loggedUser = useSelector((state) => state.auth.loggedUser);
@@ -47,11 +48,11 @@ export const Header = () => {
   }
 
   return (
-    <div className="header">
+    <div className={`header ${type}`}>
       <div className="container">
         <div className="header-wrapper">
           <Link to={`${loggedIn ? "/workspaces" : "/"}`}>
-            <img src={mavaLogo} alt="logo" />
+            <img src={type === "on-light"?  mavaLogo: mavaLogoWhite} alt="logo" className="logo"/>
           </Link>
           <div className="header-buttons">{buttons}</div>
         </div>

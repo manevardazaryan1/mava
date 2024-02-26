@@ -89,7 +89,7 @@ const TodoListContainer = ({
           <ListLoading />
         </div>
       ) : !lists.length ? (
-        <div className="containerList containerClass"><p className="containerClass-text">Add your first list!</p></div>
+        <div className="containerList containerClass"><p className="container-class-text">Add your first list!</p></div>
       ) : (
 
         <div ref={elementRef} style={elementWidth > viewportWidth ? { overflowX: "scroll"} : {width:'100%'}} className="wrapper">

@@ -1,15 +1,15 @@
 .card-modal {
-  background: #fff;
   padding: 25px;
   z-index: 999;
-  box-shadow: 2px 11px 14px #414141, 2px 0px 20px #666666;
   width: 75%;
   border-radius: 10px;
-  background: rgba(177, 177, 177, 0.31);
+  background: #a9a9a942;
   border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(19.4px);
   backdrop-filter: blur(19.4px);
   transform: translateY(5%);
+  border: 1px solid #ffffff40;
+  box-shadow: 0 1px 3px rgb(37 37 37 / 55%);
 }
 
 #card-modal-block {
@@ -23,7 +23,7 @@
   display: flex;
   justify-content: center !important;
   align-items: center !important;
-  background-color: #e5e2d8;
+  background: #452eb712;
   padding: 25px;
   background: #00000079;
   flex-direction: column;
@@ -32,7 +32,7 @@
 .st-logo-card-modal img {
   width: inherit;
   vertical-align: top;
-  width: 50px;
+  width: 150px;
   margin-right: 25px;
 }
 
@@ -42,10 +42,10 @@
   left: 0;
   width: 100%;
   padding: 10px;
-  background: rgba(177, 177, 177, 0.31);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  background: #ffffff42;
   -webkit-backdrop-filter: blur(19.4px);
   backdrop-filter: blur(19.4px);
+  box-shadow: 0 1px 3px rgb(37 37 37 / 55%);
 }
 
 .card-header {
@@ -84,7 +84,7 @@
   cursor: pointer;
   transition: background-color .15s ease !important;
   font-weight: 400;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.18) !important;
+  box-shadow: 0 1px 15px rgb(108 108 108 / 18%) !important;
   transition: all 0.3s ease-in-out;
 }
 
@@ -93,7 +93,6 @@
 .edit-btn:hover,
 .description-btn:hover {
   background-color: rgba(255, 255, 255, 0.5) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2) !important;
   transition: all 0.3s ease-in-out !important;
 }
 
@@ -143,7 +142,7 @@
 .quill {
   background: rgba(255, 255, 255, 0.1) !important;
   border-radius: 10px !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 1px 15px rgb(182 182 182 / 20%);
   backdrop-filter: blur(12.3px) !important;
   -webkit-backdrop-filter: blur(12.3px) !important;
   border: 1px solid rgba(255, 255, 255, 0.64) !important;
@@ -161,7 +160,7 @@
   font-size: 14px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 15px rgb(182 182 182 / 20%);
   backdrop-filter: blur(12.3px);
   -webkit-backdrop-filter: blur(12.3px);
   border: 1px solid rgba(255, 255, 255, 0.64);
@@ -186,7 +185,6 @@
 
 .scroll_effect::-webkit-scrollbar-thumb,
 .scroll_effect::-webkit-scrollbar-track {
-
   border-top-right-radius: 10px !important;
 }
 
@@ -198,8 +196,8 @@
   -webkit-backdrop-filter: blur(12.3px) !important;
 }
 
-.ql-editor::-webkit-scrollbar-thumb:hover,
-.scroll_effect::-webkit-scrollbar-thumb:hover {
+.ql-editor::-webkit-scrollbar-thumb,
+.scroll_effect::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, .9) !important;
   border-bottom-right-radius: 10px !important;
 }
@@ -210,7 +208,6 @@
 }
 
 .card-header-title a {
-  opacity: .5;
   font-size: 31px;
   display: flex;
   align-items: center;
@@ -219,12 +216,12 @@
 }
 
 .card-header-title:hover {
-  opacity: .45;
+  opacity: .9;
   transition: all .2s ease-in-out;
 }
 
 .description-title {
-  opacity: .2;
+  opacity: .35;
   margin: 25px 0 25px 0;
   margin-top: 0;
   font-size: 25px;

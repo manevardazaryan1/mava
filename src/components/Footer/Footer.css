@@ -5,6 +5,7 @@
   z-index: 1;
   border-top: 1px solid #ffffff12;
   background-color: #00000014;
+  backdrop-filter: blur(64.4px);
 }
 
 .footer-wrapper {

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+import { Header } from "../../components/Header/Header"
 import TodoList from "../../components/Todo/TodoList"
 import CardModal from "../../components/CardModal/CardModal"
 
@@ -33,7 +34,8 @@ const BoardPage = () => {
     const selectedImg = currentBoard.find(board => board.id === id)?.img?.bigImg
     return (
         <>
-            <div style={{ backgroundImage: `url(${selectedImg})` }} className="board-list-conteyner">
+            <Header type="on-image"/>
+            <div style={{ backgroundImage: `url(${selectedImg})` }} className="board-list-container">
                 <TodoList boardId={id} setCardModal={setCardModal} setCardId={setCardId}/>
             </div>
             {

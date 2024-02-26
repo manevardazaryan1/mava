@@ -42,16 +42,23 @@
 
 
 .newBoardTitle {
-  border: none;
-  max-width: 150px;
-  border-radius: 5px;
-  padding: 3px 5px;
-  color: white;
-  font-size: 20px;
-  margin-top: 9px;
+  width: 150px;
+  padding: 10px;
+  height: 37px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 1px 15px rgb(121 121 121 / 10%);
+  backdrop-filter: blur(12.3px);
+  -webkit-backdrop-filter: blur(12.3px);
+  border: 1px solid rgba(255, 255, 255, 0.64);
+  color: #353535;
+  margin-top: 5px;
   margin-left: 5px;
-  font-family: "Poppins",sans-serif;
-  background-color: rgba(0, 0, 0, 0.488);
+}
+
+.newBoardTitle:focus-visible {
+  outline: none !important;
 }
 
 /* >>>>>>>>>>>> */
@@ -86,14 +93,17 @@
 }
 
 .boardItem__btnWrapper p {
-  text-align: left;
-  font-size: 13px;
-  padding: 2px;
+  font-size: 16px;
   transition: all .3s;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all .2s ease-in-out;
 }
 
 .boardItem__btnWrapper p:hover {
-  background: rgba(0, 0, 0, 0.2);
+  opacity: .8;
+  transition: all .2s ease-in-out;
 }
 
 .boardItem__editBtn:hover .boardItem__btnWrapper {

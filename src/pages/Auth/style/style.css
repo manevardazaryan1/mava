@@ -18,7 +18,7 @@
     top: 50%;
     transform: translateY(-50%);
     padding: 35px;
-    backdrop-filter: blur(19.4px);
+    backdrop-filter: blur(54.4px);
     height: 100%;
     background: #00000026;
   }

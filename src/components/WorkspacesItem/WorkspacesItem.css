@@ -22,7 +22,7 @@
 }
 
 .workspaces-item__info:hover {
-  background-color: #dde4ec;
+  background-color: #452eb71f;
 }
 
 .workspaces-item__img {
@@ -88,14 +88,15 @@
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 45px;
+  padding-left: 45px;
 }
 
 .workspaces-item__more-tab:hover {
-  background-color: #b8bfc6;
+  background-color: #452eb71f;
 }
+
 .workspaces-item__more-tab.active{
-  background-color: #cacaca;
+  background-color: #452eb71f;
 }
 
 @media only screen and (max-width: 768px) {

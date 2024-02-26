@@ -4,19 +4,16 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 15px 15px 25px 15px;
-  background: rgb(255 255 255 / 15%);
+  background: #afa7d721;
   border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   width: -moz-fit-content;
   width: fit-content;
   display: block;
   animation: opacity .5s forwards;
-  opacity: 0;
   z-index: 100;
-  box-shadow: 0 1px 10px rgb(186 186 186 / 55%);
+  box-shadow: 0 1px 10px rgb(222 222 222 / 30%);
   backdrop-filter: blur(19.4px);
   -webkit-backdrop-filter: blur(19.4px);
   color: #636363 !important;
@@ -46,13 +43,13 @@
   cursor: pointer;
   transition: background-color .15s ease !important;
   font-weight: 400;
-  box-shadow: 0 1px 4px rgb(128 128 128 / 18%) !important;
+  box-shadow: 0 1px 4px rgb(198 198 198 / 18%) !important;
 }
 
 
 .close-add-workspace-modal-btn:hover {
   background-color: rgba(255, 255, 255, 0.5) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 1px 15px rgb(189 189 189 / 20%) !important;
   transition: all 0.3s ease-in-out !important;
 }
 
@@ -137,7 +134,7 @@
   font-size: 14px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 15px rgb(121 121 121 / 10%);
   backdrop-filter: blur(12.3px);
   -webkit-backdrop-filter: blur(12.3px);
   border: 1px solid rgba(255, 255, 255, 0.64);
@@ -147,15 +144,23 @@
 }
 
 .create-box__info .button {
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12.3px);
-  color: #333;
+  padding: 15px;
+  color: #636363 !important;
+  font-size: 21px !important;
+  text-align: center;
+  background: hsla(0,0%,100%,.2) !important;
+  border: 2px solid hsla(0,0%,100%,.1) !important;
+  border-radius: 10px !important;
+  cursor: pointer;
+  transition: all .15s ease !important;
+  font-weight: 400;
+  box-shadow: 0 1px 15px rgb(218 218 218 / 10%) !important;
 }
 
-
 .create-box__info .button:hover {
-  background: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255 255 255 / 55%) !important;
+  box-shadow: 0 1px 15px rgb(155 155 155 / 7%) !important;
+  transition: all 0.3s ease-in-out !important;
 }
 
 .create-box__info input:focus-visible {

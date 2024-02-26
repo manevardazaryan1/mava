@@ -102,7 +102,7 @@ export const SettingsContent = ({ type }) => {
   }, [])
   return (
     <div className="settings-content">
-      <button onClick={closeSettingBox} className="setting-close"><span>+</span></button>
+      <button onClick={closeSettingBox} className="setting-close"><span><i className="fa-solid fa-xmark"></i></span></button>
       {
         (() => {
           switch (type) {
@@ -113,7 +113,7 @@ export const SettingsContent = ({ type }) => {
                   <p className="settings-title__text">Want to change it? Write new title below and save.</p>
                   <form onSubmit={(e) => titleChangeSubmit(e)}>
                     <label className="setting-title__input">New Title
-                      <input type="text" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
+                      <input type="text" placeholder="Title" value={newTitle} onChange={(e) => setNewTitle(e.target.value)} />
                       <button type="submit">Save</button>
                     </label>
                   </form>
@@ -169,7 +169,7 @@ export const SettingsContent = ({ type }) => {
                   <p className="settings-title__text --delete">Workspaces cannot be restored.</p>
                   <form onSubmit={onDeleteWorkspace}>
                     <label className="setting-title__input">Input your password
-                      <input type="password" value={pass} onChange={(e) => setPass(e.target.value)} />
+                      <input type="password" placeholder="Password" value={pass} onChange={(e) => setPass(e.target.value)} />
                     </label>
                   </form>
                   {!passIsCorrect && <p>Wrong password, try again.</p>}

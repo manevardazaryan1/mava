@@ -21,6 +21,7 @@ import {
   doc
 } from "firebase/firestore";
 import DeleteModal from "../../components/CardModal/DeleteModal";
+import { Header } from "../../components/Header/Header";
 
 export default function Account() {
   const dispatch = useDispatch();
@@ -128,108 +129,111 @@ export default function Account() {
   const userInitial = user.userName ? user.userName[0].toUpperCase() : "";
 
   return (
-    <div className="account-section">
-      {showChangePasswordModal && (
-        <div className="change-modal">
-          <div className="change-modal-content">
-            <h2>Change Password</h2>
-            <form onSubmit={handlePasswordChange}>
-              {Object.keys(passwordErrors).length > 0 && (
-                <div className="password-validation-errors">
-                  {Object.values(passwordErrors).map((error, index) => (
-                    <p key={index} className="error-message">
-                      {error}
-                    </p>
-                  ))}
-                </div>
-              )}
-              <input
-                type="password"
-                placeholder="New Password"
-                value={newPassword}
-                onChange={(e) => setNewPassword(e.target.value)}
+    <>
+      <Header type="on-light"/>
+      <div className="account-section">
+        {showChangePasswordModal && (
+          <div className="change-modal">
+            <div className="change-modal-content">
+              <h2>Change Password</h2>
+              <form onSubmit={handlePasswordChange}>
+                {Object.keys(passwordErrors).length > 0 && (
+                  <div className="password-validation-errors">
+                    {Object.values(passwordErrors).map((error, index) => (
+                      <p key={index} className="error-message">
+                        {error}
+                      </p>
+                    ))}
+                  </div>
+                )}
+                <input
+                  type="password"
+                  placeholder="New Password"
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
+                />
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                />
+                <button type="submit">Change Password</button>
+                <button onClick={() => setShowChangePasswordModal(false)}>
+                  Cancel
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+        {showChangeUsernameModal && (
+          <div className="change-modal">
+            <div className="change-modal-content">
+              <h2>Change Username</h2>
+              <form onSubmit={handleUsernameChange}>
+                <input
+                  type="text"
+                  placeholder="New Username"
+                  value={newUsername}
+                  onChange={(e) => setNewUsername(e.target.value)}
+                />
+                <button type="submit">Change Username</button>
+                <button onClick={() => setShowChangeUsernameModal(false)}>
+                  Cancel
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+        {showDeleteModal && (
+          <div className="delete-modal">
+            <div className="delete-modal-content">
+              <h2>Confirm Account Deletion</h2>
+              <p>
+                Are you sure you want to delete your account? This action cannot
+                be undone.
+              </p>
+              <button onClick={handleDeleteConfirmation}>Yes, Delete</button>
+              <button onClick={() => setShowDeleteModal(false)}>Cancel</button>
+            </div>
+          </div>
+        )}
+        <div className="account-container">
+          <div className="account-avatar">
+            {user.image ? (
+              <img src={user.image} alt="Profile" />
+            ) : (
+              <div className="default-avatar">{userInitial}</div>
+            )}
+            <div className="account-avatar-overlay">
+              <img
+                src={cameraIcon}
+                alt="Update"
+                className="account-avatar-icon"
               />
-              <input
-                type="password"
-                placeholder="Confirm Password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-              <button type="submit">Change Password</button>
-              <button onClick={() => setShowChangePasswordModal(false)}>
-                Cancel
-              </button>
-            </form>
+              <input type="file" id="imageUpload" onChange={handleImageUpload} />
+              <label htmlFor="imageUpload" className="account-avatar-upload">
+                Update Photo
+              </label>
+            </div>
           </div>
-        </div>
-      )}
-      {showChangeUsernameModal && (
-        <div className="change-modal">
-          <div className="change-modal-content">
-            <h2>Change Username</h2>
-            <form onSubmit={handleUsernameChange}>
-              <input
-                type="text"
-                placeholder="New Username"
-                value={newUsername}
-                onChange={(e) => setNewUsername(e.target.value)}
-              />
-              <button type="submit">Change Username</button>
-              <button onClick={() => setShowChangeUsernameModal(false)}>
-                Cancel
-              </button>
-            </form>
+          <div className="account-details">
+            <h2>{user.userName}</h2>
+            <p>{user.email}</p>
+            <button onClick={() => setShowChangePasswordModal(true)}>
+              Change Password
+            </button>
+            <button onClick={() => setShowChangeUsernameModal(true)}>
+              Change Username
+            </button>
+            {feedbackMessage && (
+              <p className="feedback-message">{feedbackMessage}</p>
+            )}
+            <button onClick={handleSwitchAccount}>Switch Account</button>
+            <button onClick={handleDeleteAccount}>Delete Account</button>
           </div>
-        </div>
-      )}
-      {showDeleteModal && (
-        <div className="delete-modal">
-          <div className="delete-modal-content">
-            <h2>Confirm Account Deletion</h2>
-            <p>
-              Are you sure you want to delete your account? This action cannot
-              be undone.
-            </p>
-            <button onClick={handleDeleteConfirmation}>Yes, Delete</button>
-            <button onClick={() => setShowDeleteModal(false)}>Cancel</button>
-          </div>
-        </div>
-      )}
-      <div className="account-container">
-        <div className="account-avatar">
-          {user.image ? (
-            <img src={user.image} alt="Profile" />
-          ) : (
-            <div className="default-avatar">{userInitial}</div>
-          )}
-          <div className="account-avatar-overlay">
-            <img
-              src={cameraIcon}
-              alt="Update"
-              className="account-avatar-icon"
-            />
-            <input type="file" id="imageUpload" onChange={handleImageUpload} />
-            <label htmlFor="imageUpload" className="account-avatar-upload">
-              Update Photo
-            </label>
-          </div>
-        </div>
-        <div className="account-details">
-          <h2>{user.userName}</h2>
-          <p>{user.email}</p>
-          <button onClick={() => setShowChangePasswordModal(true)}>
-            Change Password
-          </button>
-          <button onClick={() => setShowChangeUsernameModal(true)}>
-            Change Username
-          </button>
-          {feedbackMessage && (
-            <p className="feedback-message">{feedbackMessage}</p>
-          )}
-          <button onClick={handleSwitchAccount}>Switch Account</button>
-          <button onClick={handleDeleteAccount}>Delete Account</button>
         </div>
       </div>
-    </div>
+    </>
   );
 }
