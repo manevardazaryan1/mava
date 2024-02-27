@@ -20,13 +20,13 @@ import {
   deleteDoc,
   doc
 } from "firebase/firestore";
-import DeleteModal from "../../components/CardModal/DeleteModal";
 import { Header } from "../../components/Header/Header";
 
 export default function Account() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.auth.loggedUser);
+  const [userName, setUserName] = useState(user.userName);
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordErrors, setPasswordErrors] = useState({});
@@ -86,7 +86,7 @@ export default function Account() {
     window.localStorage.setItem("loggedUser", JSON.stringify(updatedUser));
     setShowChangeUsernameModal(false);
     setFeedbackMessage("Username successfully changed.");
-    const snapshot = await getDocs(usersCollection);
+    setUserName(newUsername);
     await changeAccountData({ userName: newUsername });
   };
 
@@ -200,8 +200,8 @@ export default function Account() {
         )}
         <div className="account-container">
           <div className="account-avatar">
-            {user.image ? (
-              <img src={user.image} alt="Profile" />
+            {user.image && user.image.split(".")[1] !== "JPG" ? (
+              <img src={user.image} alt={user.userName[0].toUpperCase()} />
             ) : (
               <div className="default-avatar">{userInitial}</div>
             )}
@@ -218,7 +218,7 @@ export default function Account() {
             </div>
           </div>
           <div className="account-details">
-            <h2>{user.userName}</h2>
+            <h2>{userName}</h2>
             <p>{user.email}</p>
             <button onClick={() => setShowChangePasswordModal(true)}>
               Change Password

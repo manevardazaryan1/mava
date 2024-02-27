@@ -3,16 +3,17 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #ecf0f3;
+  background-color: #edf7fb;
 }
 
 .account-container {
-  background: #fff;
+  background: #edf7fb;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  box-shadow: 0px 1px 2px #cecece;
   text-align: center;
   width: 350px;
+  margin-top: 55px
 }
 
 .account-avatar img {
@@ -31,34 +32,26 @@
 .account-details input,
 .account-details button {
   width: 100%;
-  padding: 10px 20px;
+  padding: 15px 20px;
   margin: 10px 0;
-  border-radius: 50px;
+  border-radius: 10px;
   border: none;
   outline: none;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .account-details button {
-  background: linear-gradient(
-    141deg,
-    rgba(255, 153, 0, 0.96) 0%,
-    rgba(205, 0, 255, 0.96) 100%
-  );
-  color: white;
+  color: #fff;
   cursor: pointer;
   font-weight: 900;
   text-transform: uppercase;
   transition: all 0.3s ease;
+  background: #7063ac;
 }
 
 .account-details button:hover {
-  background: linear-gradient(
-    141deg,
-    rgba(255, 153, 0, 0.96) 0%,
-    rgba(205, 0, 255, 0.96) 100%
-  );
-  box-shadow: 4px 4px 6px #cbced1, -4px -4px 6px white;
+  transition: all 0.3s ease;
+  background: #8475cb;
 }
 
 .account-details button:active {
@@ -71,15 +64,15 @@
 }
 
 .input-error {
-  border: 2px solid #950101 !important;
+  border: 1px solid hsl(357, 78%, 55%) !important;
 }
 
 .valid-input {
-  border: 2px solid #59ce8f !important;
+  border: 1px solid 1px solid hsl(174.21deg 95% 23.53%) !important;
 }
 
 .error-message {
-  color: #950101;
+  color: hsl(357, 78%, 55%) !important;
   font-size: 0.85rem;
   margin-top: -5px;
   margin-bottom: 10px;
@@ -108,7 +101,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: #452eb73d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,10 +109,14 @@
 }
 
 .delete-modal-content {
-  background: #fff;
+  background: #d9d2f773;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+  width: 300px;
+  box-shadow: 0 1px 66px 18px #a3a3a336;
+  backdrop-filter: blur(19.4px);
+  -webkit-backdrop-filter: blur(19.4px);
 }
 
 .account-avatar-overlay {
@@ -164,14 +161,13 @@
   display: none;
 }
 
-/* Add this to Account.css */
 .change-modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: #452eb73d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,12 +175,18 @@
 }
 
 .change-modal-content {
-  background: #e8e8e8;
+  background: #d9d2f773;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   width: 300px;
-  box-shadow: 4px 4px 8px #565656, -4px -4px 8px rgb(107 101 101);
+  box-shadow: 0 1px 66px 18px #a3a3a336;
+  backdrop-filter: blur(19.4px);
+  -webkit-backdrop-filter: blur(19.4px);
+}
+
+.delete-modal-content h2 {
+  margin-bottom: 15px;
 }
 
 .change-modal-content h2 {
@@ -192,44 +194,70 @@
 }
 
 .change-modal-content input {
-  width: 100%;
   padding: 10px;
-  background-color: #e8e8e8;
-  margin-bottom: 20px;
-  border-radius: 3.5em;
-  border: 1px solid #ddd;
-  box-shadow: inset 7px 7px 7px #c1c4c7, inset -7px -7px 7px white;
-  outline: none;
+  padding-left: 20px;
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 1px 15px rgb(121 121 121 / 10%);
+  backdrop-filter: blur(12.3px);
+  -webkit-backdrop-filter: blur(12.3px);
+  border: 1px solid rgba(255, 255, 255, 0.64);
+  color: #353535;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 15px;
 }
 
 .change-modal-content input:focus {
   outline: none;
-  box-shadow: inset 4px 4px 4px #cbced1, inset -4px -4px 4px white !important;
+  background: rgba(255, 255, 255, 0.356);
   transition: all 0.3s ease-in-out;
 }
+
 .change-modal-content button,
 .delete-modal-content button {
-  padding: 10px 20px;
-  margin-right: 10px;
-  border-radius: 3.5em;
-  background: #e8e8e8;
-  box-shadow: 5px 5px 10px #c5c5c5, -5px -5px 10px #ffffff;
-  border: none;
+  width: 100%;
+  padding: 15px;
+  color: #636363 !important;
+  font-size: 21px !important;
+  text-align: center;
+  background: hsla(0, 0%, 100%, .2) !important;
+  border: 2px solid hsla(0, 0%, 100%, .1) !important;
+  border-radius: 10px !important;
   cursor: pointer;
-  transition: background-color 0.5s ease-in-out;
+  transition: all .15s ease !important;
+  font-weight: 400;
+  box-shadow: 0 1px 15px rgb(218 218 218 / 10%) !important;
+}
+
+.delete-modal-content p {
+  margin-bottom: 15px;
+}
+
+.delete-modal-content button:last-child,
+.change-modal-content button:last-child {
+  margin-top: 15px;
 }
 
 .change-modal-content button:hover,
 .delete-modal-content button:hover {
-  background: linear-gradient(145deg, #f8f8f8, #d1d1d1);
-  box-shadow: 5px 5px 10px #c5c5c5, -5px -5px 10px #ffffff;
-  transition: background-color 0.5s ease-in-out;
+  background-color: rgb(255 255 255 / 55%) !important;
+  box-shadow: 0 1px 5px rgb(155 155 155 / 7%) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.change-modal-content button p,
+.delete-modal-content button p,
+.change-modal-content button h2,
+.delete-modal-content button h2 {
+  color: #333;
 }
 
 .change-modal-content button:active,
 .delete-modal-content button:active {
   background: #e8e8e8;
-  box-shadow: inset 5px 5px 10px #c5c5c5, inset -5px -5px 10px #ffffff;
   transition: background-color 0.5s ease-in-out;
 }
 
@@ -243,8 +271,8 @@
   align-items: center;
   justify-content: center;
   border: 2px solid #cbced1;
-  background-color: #5d2d85;
-  color: #ffffff;
+  background-color: #452eb7;
+  color: #fff;
   font-size: 48px;
   font-family: "Roboto", sans-serif;
 }

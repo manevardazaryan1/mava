@@ -2,16 +2,16 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBDzGMH_gEJsi6PAxnGKCf9A1-b4M3pdOA",
-  authDomain: "amma-track-app.firebaseapp.com",
-  projectId: "amma-track-app",
-  storageBucket: "amma-track-app.appspot.com",
-  messagingSenderId: "573514537905",
-  appId: "1:573514537905:web:f90ca48363ffb910947b90",
-  measurementId: "G-VPV0LTZQZL"
+  apiKey: "AIzaSyA68vv5ofyQiZw9pWODQ3X9tn-7vl1Wcc0",
+  authDomain: "mava-project.firebaseapp.com",
+  projectId: "mava-project",
+  storageBucket: "mava-project.appspot.com",
+  messagingSenderId: "908117238251",
+  appId: "1:908117238251:web:0fef3eddc676b7281cf9ae",
+  measurementId: "G-F01SHCSGDJ"
 };
 
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-  
-  export { db };
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+export { db };

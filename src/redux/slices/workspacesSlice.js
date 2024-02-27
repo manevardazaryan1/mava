@@ -1,27 +1,6 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 const initialState = {
-  workspaces: [
-    {id: "2024-02-12T11:38:35.515A", 
-      img: {thumb: "https://images.unsplash.com/photo-1674673353738-dc8039354dd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NTAxMDl8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDc3Mzc5MDh8&ixlib=rb-4.0.3&q=80&w=200"},
-      title: "w3",
-      user: {
-        email: "admin@gmail.com",
-        id: 1,
-        password: "admin",
-        userName: "admin"
-      }
-    },
-  {id: "2024-02-12T11:40:39.958A", 
-    img: {thumb: "https://images.unsplash.com/photo-1591184209497-9237faf84714?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1NTAxMDl8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MDc3MzgwMzF8&ixlib=rb-4.0.3&q=80&w=200"},
-    title: "w4",
-    user: {
-      email: "admin@gmail.com",
-      id: 1,
-      password: "admin",
-      userName: "admin"
-      }
-    }
-  ],
+  workspaces: [],
   selectedImg: {
     thumb: ""
   },

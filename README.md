@@ -1,10 +1,11 @@
 # mava app
 
+## mava: A Modified [AMMA-Track](https://github.com/manevardazaryan1/AMMA-Track) Repository
+
 mava is a Trello clone designed to streamline task management and collaboration within teams. It provides a user-friendly interface for creating boards, lists, and cards to organize and prioritize tasks efficiently.
 
-## Features
+### Features
 
 - **Create Boards:** Represent different projects or categories.
 - **Organize Lists:** Efficiently manage tasks within boards using lists.
 - **Break Down Tasks:** Create individual cards for each task with unique details and comments.
-

@@ -18,7 +18,7 @@
     top: 50%;
     transform: translateY(-50%);
     padding: 35px;
-    backdrop-filter: blur(54.4px);
+    backdrop-filter: blur(102.4px);
     height: 100%;
     background: #00000026;
   }
@@ -55,22 +55,6 @@
     margin-left: 30%;
   }
   
-  /* .sign-up-info-text::after {
-    position: absolute;
-    content: "";
-    width: 75px;
-    height: 75px;
-    z-index: 0;
-    top: 135%;
-    right: 15%;
-    background: rgba(255, 255, 255, 0);
-    border-radius: 10px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(19.4px);
-    -webkit-backdrop-filter: blur(19.4px);
-    animation: rotate 19s ease-in-out infinite; 
-  } */
-  
   .sign-up-info-title {
     margin-bottom: 25px;
     font-size: 35px;
@@ -105,10 +89,8 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background: #2f5f40;
-    /* background-image: url("https://images.unsplash.com/photo-1706523868343-62ddc796cd15?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-     */
-    background-image: url("../../../images/login-signup/login-signup-background-image.webp");
+    background: #452eb7;
+    background-image: radial-gradient(rgba(69, 46, 183, .5), rgba(55, 37, 146, .5), #1b1247), url("../../../images/login-signup/login-signup-background-image.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -196,7 +178,7 @@
     background: rgb(255 255 255 / 19%);
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(19.4px);
+    backdrop-filter: blur(54.4px);
     -webkit-backdrop-filter: blur(19.4px);
     position: relative;
     z-index: 1;
@@ -206,35 +188,6 @@
     position: relative;
     width: 50%;
   }
-  
-  /* .sign-up-block::after,
-  .sign-up-block::before {
-    position: absolute;
-    content: "";
-    z-index: 0;
-    border-radius: 10px;
-    backdrop-filter: blur(19.4px);
-    -webkit-backdrop-filter: blur(19.4px);
-    border-radius: 50%;
-    box-shadow: 0 0 50px #ffffff;
-    z-index: -1;
-  }
-
-  .sign-up-block::before {
-    width: 300px;
-    height: 300px;
-    top: -150px;
-    right: -150px;
-    background-color: #f7f7e9;
-  }
-  
-  .sign-up-block::after {
-    width: 250px;
-    height: 250px;
-    top: -125px;
-    right: -150px;
-    background-color: #f7f7e9;
-  } */
 
   @keyframes rotate {
     0% { transform: rotate(0deg); }
@@ -250,7 +203,6 @@
   .auth-form div:not(.error) {
     display: flex;
     flex-wrap: wrap;
-    /* flex-direction: column; */
     width: 100%;
   }
   

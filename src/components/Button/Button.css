@@ -62,7 +62,7 @@
   justify-content: center;
   margin-right: 15px;
   color: #ffffff;
-  background: hsl(250.07deg 59.83% 44.9%) !important;
+  background: #A0B72E !important;
 }
 
 .on-image .button.account-btn {
@@ -74,7 +74,7 @@
 }
 
 .button.account-btn:hover {
-  background: #5538e2 !important;
+  background: #bad244 !important;
   transition: all 0.3s ease-in-out !important;
 }
 

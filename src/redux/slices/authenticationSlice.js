@@ -10,9 +10,6 @@ const initialState = {
 export const uploadUserImage = createAsyncThunk(
   "authentication/uploadUserImage",
   async (imageFile, { getState }) => {
-    // Here you would handle the actual file upload logic
-    // For example, uploading to a server and getting back a URL
-
     const imageUrl = URL.createObjectURL(imageFile);
     return imageUrl;
   }

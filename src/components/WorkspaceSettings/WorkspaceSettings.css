@@ -7,8 +7,11 @@
   align-items: center;
   justify-content: center;
   z-index: 99999;
-  height: 100%;
-  background-color: #4d476b63;
+  min-height: 100vh;
+  background: #452eb73d;
+  box-shadow: 0 1px 10px rgb(222 222 222 / 30%);
+  backdrop-filter: blur(3.4px);
+  -webkit-backdrop-filter: blur(19.4px);
 }
 
 .settings-wrapper {
@@ -23,14 +26,19 @@
     padding: 25px;
     z-index: 999;
     border-radius: 10px;
-    background: #fff;
-    box-shadow: 0 1px 1px 1px rgb(74 75 124 / 11%);
+    background: #ccc6e7a1;
+    background-image: url("../../images/settings/settings-back.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 1px 10px rgb(77 77 77 / 30%);
+    backdrop-filter: blur(3.4px);
     -webkit-backdrop-filter: blur(19.4px);
-    backdrop-filter: blur(19.4px);
 }
 
+.settings-icon,
 .settings-title {
   padding: 25px;
+  margin-top: 35px;
 }
 
 .settings-nav {
@@ -44,7 +52,7 @@ ul.settings-list {
 
 .settings-list__item {
   cursor: pointer;
-  border-bottom: 1px solid #cdcdcd38;
+  border-bottom: 1px solid #c4c4c462;
   font-size: 18px;
   padding: 10px 15px;
   display: flex;
@@ -53,28 +61,29 @@ ul.settings-list {
   margin-top: -1px;
   transition: all .35s;
   margin-bottom: 1px;
+  transition: all .2s ease-in-out;
 }
 
 .settings-list__item:hover {
-  background-color: #452eb742;
+  background-color: #ffffff78;
+  transition: all .2s ease-in-out;
 }
 
 .settings-list__item.active,
 .settings-list__item.active:hover {
-  background-color: #452eb778;
-  color: #fff;
+  background-color: #ffffffc3;
 }
 
 .settings-content {
   font-size: 21px;
-  background-color: #452eb721;
   color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 4px 30px rgb(118 118 118 / 7%);
-  backdrop-filter: blur(12.3px);
-  -webkit-backdrop-filter: blur(12.3px);
   border: 1px solid rgba(255, 255, 255, 0.64);
   color: #333;
+  background: #ffffff59;
+  box-shadow: 0 1px 5px #686868;
+  backdrop-filter: blur(19.4px);
+  -webkit-backdrop-filter: blur(19.4px);
 }
 
 @keyframes opening {
@@ -121,10 +130,11 @@ ul.settings-list {
 
 .settings-content button {
   padding: 10px 15px;
-  color: #fff !important;
+  color: #333 !important;
   font-size: 21px !important;
   text-align: center;
-  background: #452eb7;
+  background: hsla(0, 0%, 100%, .2) !important;
+  box-shadow: 0 1px 15px rgb(218 218 218 / 10%) !important;
   border: 2px solid hsla(0,0%,100%,.1) !important;
   border-radius: 10px !important;
   cursor: pointer;
@@ -133,8 +143,9 @@ ul.settings-list {
 }
 
 .settings-content button:hover {
-  background-color: #5538e2 !important;
-  transition: all .2s ease-in-out;
+  background-color: rgb(255 255 255 / 55%) !important;
+  box-shadow: 0 1px 5px rgb(155 155 155 / 7%) !important;
+  transition: all 0.3s ease-in-out !important;
 }
 
 .icons-box {
@@ -142,6 +153,7 @@ ul.settings-list {
   grid-template-columns: repeat(3, 120px);
   grid-template-rows: repeat(3, 80px);
   gap: 5px;
+  margin-bottom: 25px;
 }
 
 .icons-box__wrapper {
@@ -170,10 +182,6 @@ ul.settings-list {
   background-color: rgb(212, 212, 212);
 }
 
-.settings-icon button {
-  margin-top: 25px;
-}
-
 .--delete{
   color: hsl(357, 78%, 55%) !important;
   font-weight: 500;
@@ -189,7 +197,7 @@ button.setting-close {
   color: #636363 !important;
   font-size: 21px !important;
   text-align: center;
-  background: hsla(0,0%,100%,.2) !important;
+  background: hsl(0deg 0% 100% / 44%) !important;
   border: 2px solid hsla(0,0%,100%,.1) !important;
   border-radius: 10px !important;
   cursor: pointer;
@@ -197,7 +205,11 @@ button.setting-close {
   font-weight: 400;
   box-shadow: 0 1px 4px rgb(198 198 198 / 18%) !important;
   position: absolute;
-  top: -64px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
   right: 0px;
   margin: 0px;
 }
@@ -216,20 +228,15 @@ button.setting-close:hover {
   padding: 5px;
 }
 
-.settings-nav,
-.settings-content {
-  margin-top: 55px;
-}
-
 .settings-nav {
   font-size: 17px;
-  background: #452eb721;
   border-radius: 10px;
-  box-shadow: 0 4px 30px rgb(118 118 118 / 7%);
-  backdrop-filter: blur(12.3px);
-  -webkit-backdrop-filter: blur(12.3px);
   border: 1px solid rgba(255, 255, 255, 0.64);
   color: #333;
+  background: #ffffff59;
+  box-shadow: 0 1px 5px #686868;
+  backdrop-filter: blur(19.4px);
+  -webkit-backdrop-filter: blur(19.4px);
 }
 
 .settings-list__item:first-child {
@@ -237,31 +244,37 @@ button.setting-close:hover {
   border-top-left-radius: 10px;
 }
 
-.settings-icon {
-  padding: 25px;
-}
-
 @media only screen and (max-width: 600px) {
   .settings-container {
     min-height: 100vh;
-    overflow: auto;
-    padding-top: 55px;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .settings-wrapper {
     flex-direction: column-reverse;
+    justify-content: center;
     bottom: 0;
     min-height: unset;
     max-width: unset;
-    width: 90% !important;
+    width: 100%;
+    overflow: scroll;
+    min-height: 100vh;
+    height: 100vh;
+  }
+
+  .setting-close span {
+    scale: 1;
+    padding: 0;
   }
 
   .settings-nav {
-    margin-top: 35px;
+    margin-top: 0;
   }
 
+  .settings-title,
   .settings-icon {
-    padding: 17px;
+    padding: 45px 17px;
   }
 }
 
@@ -277,6 +290,19 @@ button.setting-close:hover {
     grid-template-columns: repeat(3, 65px);
     grid-template-rows: repeat(3, 51px);
   }
+
+  .workspaces-item {
+    width: 100%;
+    margin: 0;
+  }
+
+  .workspace-box p {
+    font-size: 17px;
+  }
+
+  .button.account-btn {
+    margin-right: 5px;
+  }
 }
 
 @media only screen and (max-width: 350px) {
@@ -288,4 +314,9 @@ button.setting-close:hover {
   .setting-title__input input {
     width: 95%;
   }
+
+  .settings-nav {
+    margin-top: 0;
+  }
 }
+

@@ -4,7 +4,6 @@
 
 .containerList {
   display: flex;
-  /* backdrop-filter: blur(6px); */
   padding: 10px;
   background: #363a3e74;
   box-shadow: 2px 2px 2px #242424b3, -2px -2px 6px #b5b5b5;
@@ -91,7 +90,7 @@
 }
 
 .list.active {
-  background-color: #452eb742;
+  background-color: #ffffff80;
   transition: all .2s ease-in-out;
 }
 
@@ -230,11 +229,17 @@ li {
   align-items: center;
   height: 50px;
   color: #333;
+  display: flex;
+  justify-content: space-between;
 }
 
 .list-title-X i,
 .add-card button {
   color: #333;
+}
+
+.add-card button i {
+  scale: 1.5;
 }
 
 .card-buttons {
@@ -258,7 +263,6 @@ li {
 }
 
 .delete-card button {
-  /* background-color: #56297a; */
   border: none;
   border-radius: 0.5em;
   color: #000;
@@ -270,6 +274,10 @@ li {
 .card-buttons {
   display: none;
   transition: all 0.2s ease-in-out;
+}
+
+.card-buttons {
+  width: max-content;
 }
 
 .card:hover > .card-buttons {
@@ -306,7 +314,6 @@ li {
   padding: 25px;
   border-radius: 10px;
   box-shadow: -3px 4px 8px rgb(0 0 0 / 10%);
-  text-shadow: 1px 1px 2px #fff;
   backdrop-filter: blur(5px);
 }
 
