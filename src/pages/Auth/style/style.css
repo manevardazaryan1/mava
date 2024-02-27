@@ -90,7 +90,7 @@
     align-items: center;
     overflow: hidden;
     background: #452eb7;
-    background-image: radial-gradient(rgba(69, 46, 183, .5), rgba(55, 37, 146, .5), #1b1247), url("../../../images/login-signup/login-signup-background-image.webp");
+    background-image: radial-gradient(rgba(69, 46, 183, .2), rgba(55, 37, 146, .2), #1b1247), url("../../../images/login-signup/login-signup-background-image.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -40,7 +40,7 @@ export const Header = ({ type }) => {
             onClick={() => { dispatch(closeSettings()); dispatch(deleteActiveWorkspace({})); dispatch(boardCreationBoxHandle({ val: false })); dispatch(workspaceCreationBoxHandle({ val: false })) }}
             type="secondary"
           >
-            Log Out
+            Sign Out
           </Button>
         </Link>
       </>
