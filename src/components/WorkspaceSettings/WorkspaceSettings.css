@@ -17,13 +17,11 @@
 .settings-wrapper {
     display: flex;
     width: max-content !important;
-    max-width: 600px;
-    min-height: 500px;
+    max-width: 550px;
+    min-height: 535px;
     scale: 0.70;
     animation: openScale .25s ease-in forwards;
-    gap: 20px;
     position: relative;
-    padding: 25px;
     z-index: 999;
     border-radius: 10px;
     background: #ccc6e7a1;
@@ -77,11 +75,12 @@ ul.settings-list {
 .settings-content {
   font-size: 21px;
   color: #ffffff;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.64);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: none;
   color: #333;
   background: #ffffff59;
-  box-shadow: 0 1px 5px #686868;
+  box-shadow: none;
   backdrop-filter: blur(19.4px);
   -webkit-backdrop-filter: blur(19.4px);
 }
@@ -197,15 +196,16 @@ button.setting-close {
   color: #636363 !important;
   font-size: 21px !important;
   text-align: center;
-  background: hsl(0deg 0% 100% / 44%) !important;
-  border: 2px solid hsla(0,0%,100%,.1) !important;
-  border-radius: 10px !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  border-bottom-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
   cursor: pointer;
   transition: background-color .15s ease !important;
   font-weight: 400;
-  box-shadow: 0 1px 4px rgb(198 198 198 / 18%) !important;
+  box-shadow: none !important;
   position: absolute;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,17 +230,17 @@ button.setting-close:hover {
 
 .settings-nav {
   font-size: 17px;
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.64);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border:none;
   color: #333;
   background: #ffffff59;
-  box-shadow: 0 1px 5px #686868;
+  box-shadow: none;
   backdrop-filter: blur(19.4px);
   -webkit-backdrop-filter: blur(19.4px);
 }
 
 .settings-list__item:first-child {
-  border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
 
@@ -257,15 +257,25 @@ button.setting-close:hover {
     bottom: 0;
     min-height: unset;
     max-width: unset;
-    width: 100%;
+    width: 100% !important;
     overflow: scroll;
     min-height: 100vh;
     height: 100vh;
+    overflow: hidden;
   }
 
-  .setting-close span {
-    scale: 1;
-    padding: 0;
+  .settings-content,
+  .settings-title,
+  .settings-icon,
+  .settings-wrapper,
+  .settings-nav {
+    border-radius: 0 !important;
+  }
+
+  .setting-close {
+    scale: 1.5;
+    padding: 7px 0 !important;
+    top: 11px !important;
   }
 
   .settings-nav {
@@ -274,26 +284,50 @@ button.setting-close:hover {
 
   .settings-title,
   .settings-icon {
-    padding: 45px 17px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    margin-top: 0 !important;
+    font-size: 25px;
+  }
+
+  .settings-list__item:first-child {
+    border-top-left-radius: 0;
+  }
+
+  .settings-content {
+    height: 100%;
+  }
+
+  .settings-content button,
+  .setting-title__input input {
+    width: 100%;
+  }
+
+  .icons-box {
+    width: max-content;
+    margin: 0 auto 29px auto;
   }
 }
 
 @media only screen and (max-width: 550px) {
   .icons-box {
-    grid-template-columns: repeat(3, 81px);
-    grid-template-rows: repeat(3, 54px);
-  }
-}
-
-@media only screen and (max-width: 414px) {
-  .icons-box {
-    grid-template-columns: repeat(3, 65px);
-    grid-template-rows: repeat(3, 51px);
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 86px);
   }
 
   .workspaces-item {
     width: 100%;
     margin: 0;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .icons-box {
+    grid-template-columns: repeat(3, 101px);
+    grid-template-rows: repeat(3, 79px);
   }
 
   .workspace-box p {
@@ -303,16 +337,17 @@ button.setting-close:hover {
   .button.account-btn {
     margin-right: 5px;
   }
+
+  .settings-title,
+  .settings-icon {
+    font-size: 21px;
+  }
 }
 
 @media only screen and (max-width: 350px) {
   .icons-box {
-    grid-template-columns: repeat(3, 55px);
-    grid-template-rows: repeat(3, 51px);
-  }
-
-  .setting-title__input input {
-    width: 95%;
+    grid-template-columns: repeat(3, 87px);
+    grid-template-rows: repeat(3, 75px);
   }
 
   .settings-nav {
