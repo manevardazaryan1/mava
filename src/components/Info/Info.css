@@ -1,3 +1,11 @@
+.info {
+  background-image: radial-gradient(rgba(69, 46, 183, .85), rgba(55, 37, 146, .85), #1b1247), url("../../images/login-signup/login-signup-background-image.webp");
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 105%;
+
+}
+
 .info-text {
   position: absolute;
   height: 100vh;
@@ -9,40 +17,38 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #8b8b8b0f;
+  background-color: #8b8b8b0f;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(132.4px);
-  -webkit-backdrop-filter: blur(19.4px);
 } 
 
 .info-main {
   margin-bottom: 25px;
-  width: 55%;
+  width: 50%;
   text-align: center;
   line-height: 1.5;
   font-size: 25px;
-  color: #ffffff;
+  color: #fff;
   opacity: .9;
 }
 
 .info .container {
   min-height: 100vh;
-  background-image: radial-gradient(#452eb7, #372592, #1b1247);
 }
 
 .hero-title {
   font-size: 45px;
-  color: #ffffff;
+  color: #fff;
   opacity: .5;
   margin-bottom: 25px;
   text-shadow: 0 1px 3px rgba(255, 255, 255, 0.3), 0 -1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero-label {
-  color: #ffffff;
+  color: #fff;
+  background-color: #A0B72E;
   font-size: 17px;
   margin-bottom: 25px;
-  border: 1px solid #ffffff;
+  border: 1px solid #fff;
   border-radius: 10px;
   padding: 20px;
 }
@@ -57,7 +63,6 @@
     font-size: 37px;
   }
 }
-
 
 @media only screen and (max-width: 500px) {
   .info-main {

@@ -35,6 +35,7 @@ export const authSlice = createSlice({
       state.loggedUser = {};
       window.localStorage.setItem("isLoggedIn", "OFF");
       window.localStorage.removeItem("loggedUser");
+      window.location.reload();
     },
 
     updateUserImage: (state, action) => {
@@ -61,6 +62,7 @@ export const authSlice = createSlice({
       window.localStorage.setItem("isLoggedIn", "OFF");
       window.localStorage.removeItem("loggedUser");
     },
+
     updateUsername: (state, action) => {
       const { userId, newUsername } = action.payload;
       const userIndex = state.users.findIndex((u) => u.id === userId);
@@ -82,6 +84,7 @@ export const authSlice = createSlice({
         window.localStorage.removeItem("loggedUser");
       }
     },
+    
     extraReducers: (builder) => {
       builder.addCase(uploadUserImage.fulfilled, (state, action) => {
         const userId = state.loggedUser.id;
