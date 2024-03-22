@@ -6,7 +6,7 @@
 
 ![mava(Trello clone) collage](src/images/README-Collage.webp "mava app")
 
-### Features
+## Features
 
 - **Create Boards:** Represent different projects or categories.
 - **Organize Lists:** Efficiently manage tasks within boards using lists.
