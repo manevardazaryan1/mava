@@ -14,7 +14,7 @@ function CardModal({ cardID, setCardModal, setCardId }) {
         setCardId(() => "")
     }
     return (
-        <div id="card-modal-block" onClick={() => closeCardModal()} style={{backgroundImage:  `url(${boardImage})`, backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
+        <div id="card-modal-block" onClick={() => closeCardModal()} style={{backgroundImage:  `url(${boardImage})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
             <div className="card-modal-header" onClick={(e) => e.stopPropagation()}>
                 <div className="card-header">
                     <h3 className="card-header-title">

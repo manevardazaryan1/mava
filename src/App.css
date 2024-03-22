@@ -47,10 +47,14 @@ body.disabled {
 }
 
 .container {
-  max-width: 1400px;
   width: 100%;
   padding: 25px;
   margin: 0 auto;
+}
+
+.header-wrapper {
+  max-width: 1400px;
+  margin: auto;
 }
 
 a {

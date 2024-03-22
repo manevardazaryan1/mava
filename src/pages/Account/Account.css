@@ -114,7 +114,7 @@
   border-radius: 10px;
   text-align: center;
   width: 300px;
-  box-shadow: 0 1px 66px 18px #a3a3a336;
+  box-shadow: 0 8px 71px 24px #00000036;
   backdrop-filter: blur(19.4px);
   -webkit-backdrop-filter: blur(19.4px);
 }
@@ -180,7 +180,7 @@
   border-radius: 10px;
   text-align: center;
   width: 300px;
-  box-shadow: 0 1px 66px 18px #a3a3a336;
+  box-shadow: 0 8px 71px 24px #00000036;
   backdrop-filter: blur(19.4px);
   -webkit-backdrop-filter: blur(19.4px);
 }

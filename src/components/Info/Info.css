@@ -1,8 +1,8 @@
 .info {
   background-image: radial-gradient(rgba(69, 46, 183, .85), rgba(55, 37, 146, .85), #1b1247), url("../../images/login-signup/login-signup-background-image.webp");
-  background-position: bottom left;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 105%;
+  background-size: cover
 
 }
 

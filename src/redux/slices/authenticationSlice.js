@@ -1,6 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import CryptoJS from "crypto-js";
 
+import boardsSlice from "./boardsSlice";
+import cardModalSlice from "./cardModalSlice";
+import cardsSlice from "./cardsSlice";
+import creationBoxSlice from "./creationBoxSlice";
+import todosSlice from "./todosSlice";
+import workspacesSlice from "./workspacesSlice";
+
 const initialState = {
   loggedIn: false,
   users: [],
@@ -35,7 +42,12 @@ export const authSlice = createSlice({
       state.loggedUser = {};
       window.localStorage.setItem("isLoggedIn", "OFF");
       window.localStorage.removeItem("loggedUser");
-      window.location.reload();
+      boardsSlice.initialState = {};
+      cardModalSlice.initialState = {};
+      cardsSlice.initialState = {};
+      creationBoxSlice.initialState = {};
+      todosSlice.initialState = [];
+      workspacesSlice.initialState = {};
     },
 
     updateUserImage: (state, action) => {
@@ -48,19 +60,13 @@ export const authSlice = createSlice({
         state.users[userIndex].image = imageUrl;
       }
     },
+
     updatePassword: (state, action) => {
       const { userId, newPassword } = action.payload;
       const user = state.users.find((u) => u.id === userId);
       if (user) {
         user.password = CryptoJS.SHA256(newPassword).toString(CryptoJS.enc.Hex);
       }
-    },
-
-    switchAccount: (state) => {
-      state.loggedIn = false;
-      state.loggedUser = {};
-      window.localStorage.setItem("isLoggedIn", "OFF");
-      window.localStorage.removeItem("loggedUser");
     },
 
     updateUsername: (state, action) => {
@@ -107,7 +113,6 @@ export const {
   logOut,
   updatePassword,
   updateUsername,
-  switchAccount,
   deleteAccount,
   updateUserImage
 } = authSlice.actions;

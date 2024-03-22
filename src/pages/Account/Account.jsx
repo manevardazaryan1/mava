@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useNavigate } from "react-router-dom";
 import {
   updatePassword,
-  switchAccount,
   deleteAccount,
   updateUsername,
   updateUserImage,
@@ -91,9 +90,8 @@ export default function Account() {
   };
 
   const handleSwitchAccount = () => {
-    dispatch(switchAccount());
     dispatch(logOut());
-    navigate("/login");
+    navigate("/login")
   };
 
   const handleDeleteAccount = () => {

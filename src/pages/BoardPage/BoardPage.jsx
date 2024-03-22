@@ -35,7 +35,7 @@ const BoardPage = () => {
     return (
         <>
             <Header type="on-image"/>
-            <div style={{ backgroundImage: `url(${selectedImg})` }} className="board-list-container">
+            <div style={{ backgroundImage: `linear-gradient(45deg, #2c2c2c47, #3d3d3d40), url(${selectedImg})` }} className="board-list-container">
                 <TodoList boardId={id} setCardModal={setCardModal} setCardId={setCardId}/>
             </div>
             {

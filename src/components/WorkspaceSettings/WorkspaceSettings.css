@@ -25,12 +25,12 @@
     z-index: 999;
     border-radius: 10px;
     background: #ccc6e7a1;
-    background-image: url("../../images/settings/settings-back.webp");
+    background-image: linear-gradient(rgba(60, 27, 221, 1), rgba(160, 183, 46, .3)), url("../../images/settings/settings-back.webp");
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0 1px 10px rgb(77 77 77 / 30%);
     backdrop-filter: blur(3.4px);
-    -webkit-backdrop-filter: blur(19.4px);
+    -webkit-backdrop-filter: blur(3.4px);
 }
 
 .settings-icon,
@@ -63,22 +63,23 @@ ul.settings-list {
 }
 
 .settings-list__item:hover {
-  background-color: #ffffff78;
+  background-color: #00000023;
+  color: #fff;
   transition: all .2s ease-in-out;
 }
 
 .settings-list__item.active,
 .settings-list__item.active:hover {
-  background-color: #ffffffc3;
+  background-color: #00000047;
+  color: #fff;
 }
 
 .settings-content {
   font-size: 21px;
-  color: #ffffff;
+  color: #fff;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   border: none;
-  color: #333;
   background: #ffffff59;
   box-shadow: none;
   backdrop-filter: blur(19.4px);
@@ -114,7 +115,7 @@ ul.settings-list {
   background: #ffffff30;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.64);
-  color: #333;
+  color: #fff;
   transition: all 0.3s ease-in-out;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -129,7 +130,7 @@ ul.settings-list {
 
 .settings-content button {
   padding: 10px 15px;
-  color: #333 !important;
+  color: #fff !important;
   font-size: 21px !important;
   text-align: center;
   background: hsla(0, 0%, 100%, .2) !important;
@@ -182,7 +183,7 @@ ul.settings-list {
 }
 
 .--delete{
-  color: hsl(357, 78%, 55%) !important;
+  color: hsl(357deg 56.56% 46.78%) !important;
   font-weight: 500;
   font-size: 22px;
 }
@@ -193,7 +194,7 @@ button.btn-delete{
 
 button.setting-close {
   padding: 5px 10px;
-  color: #636363 !important;
+  color: #ffffffd9 !important;
   font-size: 21px !important;
   text-align: center;
   background: transparent !important;
@@ -215,7 +216,7 @@ button.setting-close {
 }
 
 button.setting-close:hover {
-  background: hsla(0,0%,100%,.5) !important;
+  background: hsl(0deg 0% 0% / 20%) !important;
 }
 
 .setting-close button i.fa-solid.fa-xmark {
@@ -233,8 +234,8 @@ button.setting-close:hover {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border:none;
-  color: #333;
-  background: #ffffff59;
+  color: #fff;
+  background: #99999959;
   box-shadow: none;
   backdrop-filter: blur(19.4px);
   -webkit-backdrop-filter: blur(19.4px);
