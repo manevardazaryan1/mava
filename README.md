@@ -22,7 +22,8 @@
 
 ## To run this application, you'll need the following software installed on your system:
 
-**Node.js and npm:** These are essential for managing JavaScript dependencies in the project. You can download and install them from the official Node.js website: https://nodejs.org/
+- **Git:** Ensure you have Git installed on your system. You can download it from https://git-scm.com/downloads.
+- **Node.js and npm:** These are essential for managing JavaScript dependencies in the project. You can download and install them from the official Node.js website: https://nodejs.org/
 
 ## To run this application follow these steps
 
