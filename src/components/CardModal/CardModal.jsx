@@ -6,7 +6,7 @@ import logo from "../../images/mava-white.png"
 function CardModal({ cardID, setCardModal, setCardId }) {
     const path = window.location.href.split("/");
     const boardId = path[path.length - 1];
-    const boardImage  = useSelector((state) => state.boards.boards).filter((board) => board.id === boardId)[0]?.img?.thumb;
+    const boardImage  = useSelector((state) => state.boards.boards).filter((board) => board.id === boardId)[0]?.img?.bigImg;
 
     const closeCardModal = () => {
         document.body.style.overflowY = "scroll";
@@ -14,7 +14,7 @@ function CardModal({ cardID, setCardModal, setCardId }) {
         setCardId(() => "")
     }
     return (
-        <div id="card-modal-block" onClick={() => closeCardModal()} style={{backgroundImage:  `url(${boardImage})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
+        <div id="card-modal-block" onClick={() => closeCardModal()} style={{backgroundImage:  `linear-gradient(45deg, rgba(44, 44, 44, 0.28), rgba(61, 61, 61, 0.25)), url(${boardImage})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
             <div className="card-modal-header" onClick={(e) => e.stopPropagation()}>
                 <div className="card-header">
                     <h3 className="card-header-title">
